@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>WESH WESH</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="column column_left">
+                <div class="positions_div">
+                    <div class="positions_header">
+                        <div class="inner_pos symbol"><p class="p_inner_pos">Symbol</p></div>
+                        <div class="inner_pos"><p class="p_inner_pos">Price</p></div>
+                        <div class="inner_pos"><p class="p_inner_pos">Quantity</p></div>
+                        <div class="inner_pos"><p class="p_inner_pos">Profit</p></div>
+                    </div>
+                    <div class="positions_list" id="list">
+                        
+                    </div>
+                </div>
+                <!-- <div style="flex: 3;"> -->
+                    <!-- </div> -->
+                    <div class="content left diagrams">
+                        <div class="classic_header">Leaderboard - !rank</div>
+                        <!-- <div class="classic_header">Loserboard</div> -->
+                        <div class="leaderboard" id="leaderboard">
+                            <div class="leaderboard_entry classic_header">
+                                <div class="inner_leaderboard rank">Rank</div>
+                                <div style="width: 85%; display: flex;">
+                                    <div class="inner_leaderboard username">Username</div>
+                                    <div class="inner_leaderboard profit">Profit</div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank" style="color: gold;">#1</div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank" style="color: silver;">#2</div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank" style="color: #CD7F32;">#3</div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry" style="justify-content: center;">...</div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank"></div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank"></div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                            <div class="leaderboard_entry ranked">
+                                <div class="inner_leaderboard rank"></div>
+                                <div class="inner_leaderboard_arrangement">
+                                    <div class="inner_leaderboard username"></div>
+                                    <div class="inner_leaderboard profit"></div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="column column_main">
+                <div class="page_header">
+                    <div class="scrolling_box">
+                        <marquee behavior="scroll" direction="left" scrollamount=4><span id="music_text"></span> ; <span id="scrolling_text">salut</span></marquee>
+                    </div>
+                    <div class="description" onclick="audioManager.playRandomAudioFile()">
+                        <div class="description_content" style="flex: 3">
+                            <p style="padding-top: 1%; font-size: 22px;">Welcome to</p>
+                            <p style="font-size: 25px; font-weight: bold;">TWITCH PLAYS WALL STREET</p>
+                            <p style="padding-top: 2%; font-size: 18px;">Type !help in chat to get started.</p>
+                            <!-- <p style="padding-top: 1%; color:#d1d1d1; font-size: 18px;">Check account bio for more infos.</p> -->
+                        </div>
+                        <div class="description_content" style="flex: 3;">
+                            <p style="font-size: 20px;">Commands :</p>
+                            <p style="font-size: 22px;">!buy &lt;symbol&gt; ; !sell &lt;symbol&gt;</p>
+                            <p style="color:#d1d1d1; font-size: 17px;">(ex: type "!buy AAPL" to buy an Apple stock)</p>
+                            <p style="color:#d1d1d1; font-size: 17px;">Yahoo/Google Finance for examples of symbols</p>
+                        </div>
+                        <div class="description_content">
+                            <p style="margin-top: 2%;">Market is :</p> 
+                            <p id="market_status_p" style="font-size: 200%;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_main">
+                    <div class="page_main_middle">
+                        <div class="account_infos">
+                            <div class="classic_header"><p style="margin: 0;">Account informations</p></div>
+                            <div class="account_infos_content">
+                                <div class="account_infos_content_column">
+                                    <p class="account_infos_content_p">Cash : <span id="cash_span">10000</span>$</p>
+                                    <p class="account_infos_content_p">Equity : <span id="equity_span">10000</span>$</p>
+                                    <!-- <p class="account_infos_content_p_profit">Profit : <span id="profit_span">10000</span>$</p> -->
+                                </div>
+                                <div class="account_infos_content_column">
+                                    <p class="account_infos_content_p">Cash in stocks : <span id="stock_cash_span">10000</span>$</p>
+                                    <!-- <p class="account_infos_content_p">Profit ratio: <span id="profit_ratio_span">1000.53</span>%</p> -->
+                                    <p class="account_infos_content_p">Starting cash : <span id="starting_cash_span">10000</span>$</p>
+                                </div>                                        
+                            </div>
+                            <div class="account_infos_profit">                            
+                                <div class="account_infos_content_p_profit">Profit : <span id="profit_span">10000$</span> (<span id="profit_ratio_span">1000.53%</span>)</div>
+                                <div class="account_infos_content_profit_goal">Goal : <span class="green_text" id="goal_span">+0$</span></div>
+                                <div class="account_infos_content_profit_goal_bar">
+                                    <div class="account_infos_content_profit_goal_bar_header"><span id="goal_ratio_span">10%</span></div>
+                                    <div class="account_infos_content_profit_goal_bar_div">
+                                        <div class="account_infos_content_profit_goal_bar_out">
+                                            <div class="account_infos_content_profit_goal_bar_in" id="progress_bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account_infos_graph">
+                                <canvas class="chart" id="MyChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="rnd" style="position:relative">
+                            <div class="rnd_chart" style="position:absolute; top:0;">
+                                <div class="tradingview-widget-container" id="tradingview-widget-container">
+                                    <div id="tradingview_81176"></div>
+                                </div>
+                            </div>
+                            <div class="rnd_header" style="position:absolute; top:0; right:0">Random symbol :&nbsp;<span id="rnd_symbol"></span></div>
+                        </div>
+                    </div>
+                    <div class="page_main_right">
+                        <div class="buys">
+                            <div class="classic_header orders_header"> Buy orders </div>
+                            <div class="orders_content" id="buys"></div>
+                        </div>
+                        <div class="sells"> 
+                            <div class="classic_header orders_header" style="border-top: none;"> Sell orders </div>
+                            <div class="orders_content" id="sells"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="logo_site.png" id="TPWSB_logo">
+        <div id="lil_dik"></div>
+    </body>
+    <footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.2.1/chartjs-plugin-annotation.min.js"></script>
+        <script src="chartManager.js"></script> 
+        
+        <script src="scrollingElem.js"></script> 
+        <script src="positionsList.js"></script> 
+        <script src="ordersManager.js"></script> 
+        <script src="trendingList.js"></script> 
+        <script src="audioManager.js"></script>         
+        <script src="leaderboardManager.js"></script>         
+        
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript" src="tradingviewManager.js"></script>
+        
+        <script src="index.js"></script>
+    </footer>
+</html>

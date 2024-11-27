@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>BACK BACK</title>
+    </head>
+    <body>
+        Bouuuh c'est le back
+        <form action="/give_cash" method="POST">
+            <div>
+                <label for="cash">GIVE LOTTA CASH : </label>
+                <input type="number" name="cash" id="cash">
+            </div>
+            <div>
+                <input type="submit" value="send cash">
+            </div>
+        </form>
+        <form action="/scrolling_text" method="POST">
+            <div>
+                <label for="text">SET SCROLLING TEXT : </label>
+                <input type="text" name="text" id="text">
+            </div>
+            <div>
+                <input type="submit" value="send text">
+            </div>
+        </form>
+        <form action="/goal" method="POST">
+            <div>
+                <label for="goal">SET PROFIT GOAL : </label>
+                <input type="number" name="goal" id="goal">
+            </div>
+            <div>
+                <input type="submit" value="send goal">
+            </div>
+        </form>
+        <form action="/reloadMessages" method="POST">
+            <input type="submit" value="reload messages">
+        </form>
+        <form action="/reloadConfig" method="POST">
+            <input type="submit" value="reload config">
+        </form>
+    </body>
+</html>

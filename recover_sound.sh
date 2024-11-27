@@ -1,0 +1,2 @@
+pulseaudio --system
+pavucontrol
